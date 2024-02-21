@@ -194,7 +194,7 @@ def main():
                     output = markdown_compatible(output)
                 predictions.append(output)
             if is_last_page[j]:
-                out = "".join(predictions).strip()
+                out = "￼".join(predictions).strip()
                 out = re.sub(r"\n{3,}", "\n\n", out).strip()
                 if args.out:
                     out_path = args.out / Path(is_last_page[j]).with_suffix(".mmd").name
